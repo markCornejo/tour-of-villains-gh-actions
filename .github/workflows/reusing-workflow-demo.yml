@@ -1,0 +1,13 @@
+name: MARKK workflow demo
+
+on:
+  workflow_dispatch:    
+
+jobs:
+  calling_reusable_workflow:
+    uses: markCornejo/tour-of-heroes-gh-actions/.github/workflows/reusable-workflow.yml@main
+    with:
+        greeting: "HOLAAAAA 👋🏻"
+    # secrets: inherit
+    secrets:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
